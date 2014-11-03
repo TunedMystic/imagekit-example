@@ -1,0 +1,21 @@
+{% extends 'Picture/base.html' %}
+{% load staticfiles %}
+
+{% block Main %}
+    
+  <div>
+    {% for p in pics %}
+      <div>
+      
+        <h3>Original</h3>
+        <img src="{{p.avatar.url}}" />
+        
+        <h3>Thumbnail</h3>
+        <img src="{{p.thumbnail.url}}" />
+        
+      </div>
+    {% endfor %}
+  </div>
+    
+    
+{% endblock %}
